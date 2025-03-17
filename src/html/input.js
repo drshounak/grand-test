@@ -157,8 +157,8 @@ export const input_html = `<!DOCTYPE html>
                 
                 const input = document.createElement('input');
                 input.type = 'number';
-                input.id = `${subject}_${field.name}`;
-                input.name = `${subject}_${field.name}`;
+                input.id = \`${subject}_${field.name}\`;
+                input.name = \`${subject}_${field.name}\`;
                 input.value = field.value;
                 input.min = '0';
                 if (field.step) {
