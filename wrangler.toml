@@ -9,6 +9,3 @@ compatibility_date = "2023-11-01"
 binding = "NEET_PG_TRACKER"
 id = "10da7d5c175743c68fd752d7e21f3b19"  # Replace with your actual KV namespace ID
 
-[site]
-bucket = "./src"
-entry-point = "src/index.js"
