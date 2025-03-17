@@ -244,7 +244,7 @@ export const input_html = `<!DOCTYPE html>
                 // Trend
                 const trendCell = document.createElement('td');
                 const trendIndicator = document.createElement('span');
-                trendIndicator.className = `trend-indicator trend-${subjectInfo.trend}`;
+                trendIndicator.className = \`trend-indicator trend-\${subjectInfo.trend}\`;
                 
                 if (subjectInfo.trend === 'up') {
                     trendIndicator.textContent = '↑ Improving';
