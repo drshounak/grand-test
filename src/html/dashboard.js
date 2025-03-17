@@ -452,4 +452,4 @@ export const input_html = `<!DOCTYPE html>
         }
     </script>
 </body>
-</html>`
+</html>`;
