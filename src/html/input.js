@@ -223,11 +223,11 @@ export const input_html = `<!DOCTYPE html>
                     document.getElementById('status-message').textContent = 'Data saved successfully!';
                     document.getElementById('status-message').className = 'success';
                 } else {
-                    document.getElementById('status-message').textContent = `Error: ${result.error || 'Unknown error'}`;
+                    document.getElementById('status-message').textContent = \`Error: ${result.error || 'Unknown error'}\`;
                     document.getElementById('status-message').className = 'error';
                 }
             } catch (error) {
-                document.getElementById('status-message').textContent = `Error: ${error.message}`;
+                document.getElementById('status-message').textContent = \`Error: ${error.message}\`;
                 document.getElementById('status-message').className = 'error';
             }
         });
