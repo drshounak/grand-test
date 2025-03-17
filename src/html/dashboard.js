@@ -1,4 +1,4 @@
-export const input_html = `<!DOCTYPE html>
+export const dashboard_html = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
