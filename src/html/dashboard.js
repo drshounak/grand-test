@@ -244,7 +244,7 @@ export const input_html = `<!DOCTYPE html>
                 // Trend
                 const trendCell = document.createElement('td');
                 const trendIndicator = document.createElement('span');
-                trendIndicator.className = \`trend-indicator trend-\${subjectInfo.trend}\`;
+                trendIndicator.className = 'trend-indicator trend-' + subjectInfo.trend;
                 
                 if (subjectInfo.trend === 'up') {
                     trendIndicator.textContent = '↑ Improving';
@@ -296,7 +296,7 @@ export const input_html = `<!DOCTYPE html>
             // Format dates for display
             const formattedDates = sortedDates.map(date => {
                 const d = new Date(date);
-                return `${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`;
+                return d.getDate() + '/' + (d.getMonth() + 1) + '/' + d.getFullYear();
             });
             
             // Create chart
@@ -366,14 +366,14 @@ export const input_html = `<!DOCTYPE html>
                 chartDiv.className = 'chart-container';
                 
                 const canvas = document.createElement('canvas');
-                canvas.id = `chart-${subject.toLowerCase().replace(/\s+/g, '-')}`;
+                canvas.id = 'chart-' + subject.toLowerCase().replace(/\\s+/g, '-');
                 chartDiv.appendChild(canvas);
                 container.appendChild(chartDiv);
                 
                 // Format dates for display
                 const formattedDates = subjectInfo.dates.map(date => {
                     const d = new Date(date);
-                    return `${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}`;
+                    return d.getDate() + '/' + (d.getMonth() + 1) + '/' + d.getFullYear();
                 });
                 
                 // Create chart
@@ -383,10 +383,10 @@ export const input_html = `<!DOCTYPE html>
                     data: {
                         labels: formattedDates,
                         datasets: [{
-                            label: `${subject} Percentile`,
+                            label: subject + ' Percentile',
                             data: subjectInfo.percentiles,
                             borderColor: colors[index % colors.length],
-                            backgroundColor: `${colors[index % colors.length]}33`,
+                            backgroundColor: colors[index % colors.length] + '33',
                             borderWidth: 2,
                             pointRadius: 3,
                             fill: true,
