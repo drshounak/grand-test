@@ -153,7 +153,7 @@ export const input_html = `<!DOCTYPE html>
                 
                 const label = document.createElement('label');
                 label.textContent = field.label;
-                label.setAttribute('for', `${subject}_${field.name}`);
+                label.setAttribute('for', \`\${subject}_\${field.name}\`);
                 
                 const input = document.createElement('input');
                 input.type = 'number';
