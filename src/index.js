@@ -15,17 +15,15 @@ async function handleRequest(request) {
   const url = new URL(request.url);
   const path = url.pathname;
 
-  // Serve static HTML pages from the site bucket
+  // Serve static HTML pages
   if (path === '/' || path === '/input.html') {
-    const html = await fetchAsset('input.html');
-    return new Response(html, {
+    return new Response(input_html, {
       headers: { 'Content-Type': 'text/html' }
     });
   }
 
   if (path === '/dashboard' || path === '/dashboard.html') {
-    const html = await fetchAsset('dashboard.html');
-    return new Response(html, {
+    return new Response(dashboard_html, {
       headers: { 'Content-Type': 'text/html' }
     });
   }
@@ -40,13 +38,6 @@ async function handleRequest(request) {
   }
 
   return new Response('Not Found', { status: 404 });
-}
-
-// Fetch static assets (simplified for Workers environment)
-async function fetchAsset(path) {
-  // In a real Workers environment with a site bucket, this would be handled by the runtime
-  // For simplicity, we'll assume the HTML files are served directly via the bucket
-  return await fetch(`/${path}`).then(res => res.text());
 }
 
 // Handle data submission
@@ -125,3 +116,7 @@ async function handleGetAllData() {
     });
   }
 }
+
+// Import HTML content from separate files
+import { input_html } from './html/input.js';
+import { dashboard_html } from './html/dashboard.js';
