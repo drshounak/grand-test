@@ -1,0 +1,14 @@
+name = "grand-test"
+main = "src/index.js"
+compatibility_date = "2023-11-01"
+
+[vars]
+# No additional variables needed
+
+[[kv_namespaces]]
+binding = "NEET_PG_TRACKER"
+id = "your-kv-namespace-id"  # Replace with your actual KV namespace ID
+
+[site]
+bucket = "./src"
+entry-point = "src/index.js"
