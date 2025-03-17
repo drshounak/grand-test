@@ -190,11 +190,11 @@ export const input_html = `<!DOCTYPE html>
             };
             
             subjects.forEach(subject => {
-                const totalQuestions = parseInt(document.getElementById(`\${subject}_total_questions\`).value) || 0;
-                const correct = parseInt(document.getElementById(`\${subject}_correct\`).value) || 0;
-                const incorrect = parseInt(document.getElementById(`\${subject}_incorrect\`).value) || 0;
-                const skipped = parseInt(document.getElementById(`\${subject}_skipped\`).value) || 0;
-                const percentile = parseFloat(document.getElementById(`\${subject}_percentile\`).value) || 0;
+                const totalQuestions = parseInt(document.getElementById(\`${subject}_total_questions\`).value) || 0;
+                const correct = parseInt(document.getElementById(\`${subject}_correct\`).value) || 0;
+                const incorrect = parseInt(document.getElementById(\`${subject}_incorrect\`).value) || 0;
+                const skipped = parseInt(document.getElementById(\`${subject}_skipped\`).value) || 0;
+                const percentile = parseFloat(document.getElementById(\`${subject}_percentile\`).value) || 0;
                 
                 // Only include subjects with data
                 if (totalQuestions > 0 || correct > 0 || incorrect > 0 || skipped > 0 || percentile > 0) {
